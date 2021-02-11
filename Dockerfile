@@ -4,7 +4,7 @@ USER root
 RUN dnf -y install https://rpms.remirepo.net/enterprise/remi-release-8.rpm
 RUN dnf module reset php
 RUN dnf module enable php:remi-7.4 -y
-RUN yum -y install mod_ssl php php-cli php-common php-pear php-pecl-mysql php-json php-gd php-pdo php-opcache php-mbstring php-zip php-fpm php-xml php-soap curl curl-devel
+RUN yum -y install mod_ssl zip unzip php php-cli php-common php-pear php-pecl-mysql php-json php-gd php-pdo php-opcache php-mbstring php-zip php-fpm php-xml php-soap curl curl-devel
 RUN php -v
 RUN pear install php_codesniffer
 RUN yum -y install which openssh openssh-server openssh-clients openssl-libs
