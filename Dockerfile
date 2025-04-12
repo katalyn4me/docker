@@ -1,4 +1,4 @@
-FROM almalinux:9
+FROM --platform=linux/amd64 almalinux:9
 MAINTAINER Marius Catalin <katalyn4me@yahoo.com>
 USER root
 RUN dnf -y install --allowerasing curl curl-devel
